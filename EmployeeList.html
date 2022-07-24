@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Employee List</title>
+</head>
+
+<body style="background-color: azure;">
+    <script src="AppPage.js"></script>
+    <header>
+        <div id="adminName">NITYA PRIYA SAHU (ADMIN)</div>
+        <div id="emp">EMPLOYEE MANAGEMENT SYSTEM</div>
+        <div><img src="userProfile.png"></div>
+    </header>
+    <div class="head-section">Employee Management Software</div>
+    <!-- <div class="btn-section"><button onclick="addEmployee()">Add Employee</button></div> -->
+    <div>
+
+
+        <div class="content">
+            <form id="detailsForm" autocomplete="off" onsubmit="event.preventDefault();onFormSubmit()">
+                <div class="">
+                    <div class="">
+                        <span class="">First Name</span>
+                        <input type="text" placeholder="Enter your name" id="firstName" required>
+                    </div>
+                    <div class="">
+                        <span class="">Last Name</span>
+                        <input type="text" placeholder="Enter your name" id="lastName" required>
+                    </div>
+                    <div class="">
+                        <span class="">Email</span>
+                        <input type="text" placeholder="Enter your email" id="emailId" required>
+                    </div>
+                    <div class="">
+                        <span class="">Phone Number</span>
+                        <input type="number" placeholder="Enter your number" id="phoneNo" required>
+                    </div>
+                    <div class="">
+                        <span class="">Employee ID</span>
+                        <input type="text" placeholder="Enter your id" id="empId" required>
+                    </div>
+                    <div class="">
+                        <span class="details">Salary</span>
+                        <input type="number" placeholder="" id="salary" required>
+                    </div>
+                    <div class="">
+                        <span class="">Date of Birth</span>
+                        <input type="date" placeholder="" id="dob" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Add" >
+                    
+                  </div>
+            </form>
+        </div>
+
+
+        <table class="list" id="employeeList" style="margin-top: 10px;">
+            <thead>
+                <tr style="height: 2rem; align-items: center;">
+                    <th></th>
+                    <th class="descriptor">Employee ID</th> 
+                    <th class="descriptor">First Name</th>
+                    <th class="descriptor">Last Name</th>
+                    <th class="descriptor">Email</th>
+                    <th class="descriptor">Salary</th>
+                    <th class="descriptor">Date</th>
+                    <th class="descriptor">Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
