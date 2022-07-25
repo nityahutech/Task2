@@ -5,7 +5,7 @@ body{
     background-color: cornsilk;
 }
 header{
-    background-color: chocolate;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);;
     height: 3rem;
     width: 100%;
     display: flex;

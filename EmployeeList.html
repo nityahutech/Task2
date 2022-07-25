@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Employee List</title>
+    <style>
+        table, td {
+          border: 1px solid black;
+        }
+        </style>
 </head>
 
 <body style="background-color: azure;">
@@ -17,11 +22,27 @@
         <div><img src="userProfile.png"></div>
     </header>
     <div class="head-section">Employee Management Software</div>
-    <!-- <div class="btn-section"><button onclick="addEmployee()">Add Employee</button></div> -->
+    <div class="btn-section"><button onclick="addEmployee()">Add Employee</button></div>
     <div>
+       <table style="margin-top: 50px; margin-left: auto; margin-right: auto;">
+        <thead>
+            <th style="padding: 10px;">First Name</th>
+            <th style="padding: 10px;">Last Name</th>
+            <th style="padding: 10px;">Employee ID</th>
+            <th style="padding: 10px;">Email</th>
+            <th style="padding: 10px;">Salary</th>
+            <th style="padding: 10px;">Date of Birth</th>
+            <th style="padding: 10px;" colspan="2">Actions</th>
+            <th></th>
+        </thead>
+        <tbody id="myTable"></tbody>
+       </table>
+       
+       <script src="./employeetable.js">
+       </script>
 
 
-        <div class="content">
+        <!-- <div class="content">
             <form id="detailsForm" autocomplete="off" onsubmit="event.preventDefault();onFormSubmit()">
                 <div class="">
                     <div class="">
@@ -58,10 +79,10 @@
                     
                   </div>
             </form>
-        </div>
+        </div> -->
 
 
-        <table class="list" id="employeeList" style="margin-top: 10px;">
+        <!-- <table class="list" id="employeeList" style="margin-top: 10px;">
             <thead>
                 <tr style="height: 2rem; align-items: center;">
                     <th></th>
@@ -78,7 +99,7 @@
             <tbody>
 
             </tbody>
-        </table>
+        </table> -->
     </div>
 </body>
 

@@ -8,43 +8,42 @@
     <title>Add Employee</title>
 </head>
 <body>
-  <script src="AppPage.js"></script>
     <div class="container">
-        <div class="title">Add Employee</div>
+        <div class="title">Edit Employee</div>
         <div class="content">
           <form action="#">
             <div class="user-details">
               <div class="input-box">
                 <span class="details">First Name</span>
-                <input type="text" placeholder="Enter your name" id="firstName" required>
+                <input type="text" placeholder="Enter your name" id="firstName" >
               </div>
               <div class="input-box">
                 <span class="details">Last Name</span>
-                <input type="text" placeholder="Enter your name" id="lastName" required>
+                <input type="text" placeholder="Enter your name" id="lastName" >
               </div>
               <div class="input-box">
                 <span class="details">Email</span>
-                <input type="text" placeholder="Enter your email" id="emailId" required>
+                <input type="text" placeholder="Enter your email" id="emailId" >
               </div>
               <div class="input-box"> 
                 <span class="details">Phone Number</span>
-                <input type="number" placeholder="Enter your number" id="phoneNo" required>
+                <input type="number" placeholder="Enter your number" id="phoneNo" >
               </div>
               <div class="input-box">
                 <span class="details">Employee ID</span>
-                <input type="text" placeholder="Enter your id" id="empId" required>
+                <input type="text" disabled placeholder="Enter your id" id="empId" >
               </div>
               <div class="input-box">
                 <span class="details">Salary</span>
-                <input type="number" placeholder="" id="salary" required>
+                <input type="number" placeholder="" id="salary" >
               </div>
               <div class="input-box">
                 <span class="details">Date of Birth</span>
-                <input type="date" placeholder="" id="dob" required>
+                <input type="date" placeholder="" id="dob" >
               </div>
               <div class="input-box">
                 <span class="details">Education Qualification</span>
-                <!-- <input type="date" placeholder="" required> -->
+                <!-- <input type="date" placeholder="" > -->
                 <select>
                     <option>Please Select</option>
                     <option>Matriculation</option>
@@ -87,7 +86,7 @@
             
             
             <div class="button" style="display: flex; gap: 5px;">
-              <input type="submit" onclick="addEmployeeData()" value="Add" >
+              <input type="submit" onclick="updateEmployeeData()" value="Update" >
               <input type="submit" value="Cancel">
             </div>
             <div id="add-msg" style="text-align: center; font-weight: bold;"></div>
@@ -105,5 +104,6 @@
           </form>
         </div>
       </div>
+      <script src="edit.js"></script>
 </body>
 </html>

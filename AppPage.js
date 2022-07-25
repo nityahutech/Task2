@@ -19,7 +19,7 @@ function signUp() {
       lname: document.getElementById("lname").value,
       email: document.getElementById("email").value,
       pwd: document.getElementById("pwd").value,
-    //   emp: []
+      emp: []
     };
     let personList = JSON.parse(localStorage.getItem("formData"));
     if (personList == null) {
@@ -78,82 +78,95 @@ function logIn() {
     }
   }
 
-//   function addEmployee(){
-//     location.href = "AddEmployee.html"
-//   }
+  function addEmployee(){
+    location.href = "AddEmployee.html"
+  }
 //   function addEmployeeData(){
 //     location.href = "EmployeeList.html"
 //   }
 
 //   -------------------
 
-// function addEmployeeData(){
-//     function validationOfAdd(){
-//         let firstName = document.getElementById("firstName").value.trim();
-//         let lastName = document.getElementById("lastName").value.trim();
-//         let emailId = document.getElementById("emailId").value.trim();
-//         let empId = document.getElementById("emailId").value.trim();
-//         let salary = document.getElementById("salary").value.trim();
-//         let dob = document.getElementById("dob").value.trim();
+function addEmployeeData(){
+  // alert("OK")
+    // function validationOfAdd(){
+        let firstName = document.getElementById("firstName").value.trim();
+        let lastName = document.getElementById("lastName").value.trim();
+        let emailId = document.getElementById("emailId").value.trim();
+        let empId = document.getElementById("empId").value.trim();
+        let salary = document.getElementById("salary").value.trim();
+        let dob = document.getElementById("dob").value.trim();
 
-//         if (firstName != "" && lastName != "" && emailId != "" && empId != "" && salary != "" && dob != "") {
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     }
+        if (firstName || lastName && emailId && empId  && salary  && dob ) {
+         let allEmployees=JSON.parse(localStorage.getItem('employees'))||[]
+         console.log({allEmployees});
+         allEmployees.push({firstName,lastName,emailId,empId,salary,dob})
+
+         localStorage.setItem("employees",JSON.stringify(allEmployees))
+         alert("Employee added successfuly")
+
+        } else {
+           alert("NOK")
+        }
+        console.log({firstName,lastName,emailId,empId, salary,dob});
+    // }
+}
+
+
+// --------------------------------
+
+
+
+// function onFormSubmit(){
+//     var empData = readFormData();
+//     insertNewRecord(empData);
+//     resetForm();
 // }
 
-function onFormSubmit(){
-    var empData = readFormData();
-    insertNewRecord(empData);
-    resetForm();
-}
+// function readFormData(){
+//     var empData = {};
+//     empData["empId"] = document.getElementById("empId").value;
+//     empData["firstName"] = document.getElementById("firstName").value;
+//     empData["lastName"] = document.getElementById("lastName").value;
+//     empData["emailId"] = document.getElementById("emailId").value;
+//     empData["salary"] = document.getElementById("salary").value;
+//     empData["dob"] = document.getElementById("dob").value;
+//     return empData;
+// }
+// function insertNewRecord(data){
+//     var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+//     var newRow = table.insertRow(table.length);
+//     cell1 = newRow.insertCell(0);
+//     cell1.innerHTML = data.empId;
+//     cell2 = newRow.insertCell(1);
+//     cell2.innerHTML = data.firstName;
+//     cell3 = newRow.insertCell(2);
+//     cell3.innerHTML = data.lastName;
+//     cell4 = newRow.insertCell(3);
+//     cell4.innerHTML = data.emailId;
+//     cell5 = newRow.insertCell(4);
+//     cell5.innerHTML = data.salary;
+//     cell6 = newRow.insertCell(5);
+//     cell6.innerHTML = data.dob;
+//     cell7 = newRow.insertCell(6)
+//     cell7.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+//                         <a>Delete</a>`;
+// }
+// function resetForm(){
+//     document.getElementById("empId").value = "";
+//     document.getElementById("firstName").value = "";
+//     document.getElementById("lastName").value = "";
+//     document.getElementById("emailId").value = "";
+//     document.getElementById("salary").value = "";
+//     document.getElementById("dob").value = "";
+// }
 
-function readFormData(){
-    var empData = {};
-    empData["empId"] = document.getElementById("empId").value;
-    empData["firstName"] = document.getElementById("firstName").value;
-    empData["lastName"] = document.getElementById("lastName").value;
-    empData["emailId"] = document.getElementById("emailId").value;
-    empData["salary"] = document.getElementById("salary").value;
-    empData["dob"] = document.getElementById("dob").value;
-    return empData;
-}
-function insertNewRecord(data){
-    var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.empId;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.firstName;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.lastName;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.emailId;
-    cell5 = newRow.insertCell(4);
-    cell5.innerHTML = data.salary;
-    cell6 = newRow.insertCell(5);
-    cell6.innerHTML = data.dob;
-    cell7 = newRow.insertCell(6)
-    cell7.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                        <a>Delete</a>`;
-}
-function resetForm(){
-    document.getElementById("empId").value = "";
-    document.getElementById("firstName").value = "";
-    document.getElementById("lastName").value = "";
-    document.getElementById("emailId").value = "";
-    document.getElementById("salary").value = "";
-    document.getElementById("dob").value = "";
-}
-
-function onEdit(td){
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("firstName").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("lastName").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("emailId").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("empId").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("salary").value = selectedRow.cells[4].innerHTML;
-    document.getElementById("dob").value = selectedRow.cells[5].innerHTML;
-}
+// function onEdit(td){
+//     selectedRow = td.parentElement.parentElement;
+//     document.getElementById("firstName").value = selectedRow.cells[0].innerHTML;
+//     document.getElementById("lastName").value = selectedRow.cells[1].innerHTML;
+//     document.getElementById("emailId").value = selectedRow.cells[2].innerHTML;
+//     document.getElementById("empId").value = selectedRow.cells[3].innerHTML;
+//     document.getElementById("salary").value = selectedRow.cells[4].innerHTML;
+//     document.getElementById("dob").value = selectedRow.cells[5].innerHTML;
+// }
