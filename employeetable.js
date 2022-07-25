@@ -20,17 +20,17 @@ console.log({allEmployees});
 
             var row = table.insertRow(i);
             var cell1 = row.insertCell(0);
-            cell1.innerHTML=allEmployees[i]?.firstName ||"NA"
+            cell1.innerHTML=allEmployees[i]?.firstName ||""
             var cell2 = row.insertCell(1);
-            cell2.innerHTML=allEmployees[i]?.lastName ||"NA"
+            cell2.innerHTML=allEmployees[i]?.lastName ||""
             var cell3 = row.insertCell(2);
-            cell3.innerHTML=allEmployees[i]?.empId  || "NA"
+            cell3.innerHTML=allEmployees[i]?.empId  || ""
             var cell4 = row.insertCell(3);
-            cell4.innerHTML=allEmployees[i]?.emailId || "NA"
+            cell4.innerHTML=allEmployees[i]?.emailId || ""
             var cell5 = row.insertCell(4);
-            cell5.innerHTML=allEmployees[i]?.salary || "NA"
+            cell5.innerHTML=allEmployees[i]?.salary || ""
             var cell6 = row.insertCell(5);
-            cell6.innerHTML=allEmployees[i]?.dob || "NA"
+            cell6.innerHTML=allEmployees[i]?.dob || ""
             var cell7 = row.insertCell(6);
             cell7.appendChild(edtbtn)
             var cell8 = row.insertCell(7);

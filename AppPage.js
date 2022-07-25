@@ -90,12 +90,12 @@ function logIn() {
 function addEmployeeData(){
   // alert("OK")
     // function validationOfAdd(){
-        let firstName = document.getElementById("firstName").value.trim();
-        let lastName = document.getElementById("lastName").value.trim();
-        let emailId = document.getElementById("emailId").value.trim();
-        let empId = document.getElementById("empId").value.trim();
-        let salary = document.getElementById("salary").value.trim();
-        let dob = document.getElementById("dob").value.trim();
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let emailId = document.getElementById("emailId").value;
+        let empId = document.getElementById("empId").value;
+        let salary = document.getElementById("salary").value;
+        let dob = document.getElementById("dob").value;
 
         if (firstName || lastName && emailId && empId  && salary  && dob ) {
          let allEmployees=JSON.parse(localStorage.getItem('employees'))||[]
@@ -110,6 +110,10 @@ function addEmployeeData(){
         }
         console.log({firstName,lastName,emailId,empId, salary,dob});
     // }
+}
+
+function homePage(){
+  location.href = "EmployeeList.html"
 }
 
 
