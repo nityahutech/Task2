@@ -6,9 +6,12 @@ console.log({allEmployees});
         for (let i = 0; i < allEmployees?.length; i++) {
             var edtbtn = document. createElement('button');
             var dltbtn = document. createElement('button');
+            edtbtn.style.cssText = 'background: #71b7e6;  #2e96db'
+            dltbtn.style.cssText = 'background: #9b59b6; button:hover: #a938d5'
 
             edtbtn.innerHTML="Edit"
             edtbtn.onclick=()=>location.href=`EditEmployee.html?empid=${allEmployees[i]?.empId}&sl=${i}`
+            // edtbtn.classList.add("editHover")
             dltbtn.innerHTML="Delete"
             dltbtn.onclick=()=>{
                 // alert("hu")
