@@ -81,6 +81,9 @@ function logIn() {
   function addEmployee(){
     location.href = "AddEmployee.html"
   }
+  function logout(){
+    location.href = "LoginPage.html"
+  }
 //   function addEmployeeData(){
 //     location.href = "EmployeeList.html"
 //   }

@@ -23,6 +23,7 @@ header{
     padding-right: 200px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 800;
+    
 
 }
 img{
@@ -49,7 +50,7 @@ img{
 } */
 h1{
     text-align: center;
-    padding-top: 15px;
+    padding-top: 50px;
 }
 form{
     width: 300px;
